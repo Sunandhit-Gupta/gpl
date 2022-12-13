@@ -16,13 +16,13 @@
 
     <div class="hostel">Hostel: BH-5</div>
     <div class="date" id="date">Today's Date : </div>
-    
+   
 <div id="frm" class="frm">
     <form id="form" class="form">
         Enter Birth Date: 
-        <input type="number" placeholder="Date eg- 02-10-2005 has date 02" id="inpt" class="inpt">
+        <input type="number" placeholder="Date eg- 02-10-2005 has date 02" id="inpt" class="inpt" max="31" min="1">
         Enter Birth Month:
-        <input type="number" placeholder="Month eg- 02-10-2005 has date 10" id="inptformmonth" class="inptformmonth">
+        <input type="number" placeholder="Month eg- 02-10-2005 has date 10" id="inptformmonth" class="inptformmonth" max="12" min="1">
         <input type="submit" value="Search" class="goTo">
         <span id="personName" class="personName"></span>
     </form>

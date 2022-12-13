@@ -41,8 +41,8 @@ function getDates(){
         for(j=1 ; j<266 ; j++){
             birthdate = response.data[j].date;
             
-            birthday = String(birthdate.slice(0,2));
-            birthmonth = String(birthdate.slice(3,5));
+            birthday = parseInt(birthdate.slice(0,2));
+            birthmonth = parseInt(birthdate.slice(3,5));
             //  console.log(birthmonth);
 
         
