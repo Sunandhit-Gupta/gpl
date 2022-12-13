@@ -1,0 +1,79 @@
+*{
+    background-color: rgb(0, 0, 0);
+}
+.a{
+    color: yellow;
+    text-align: center;
+    font-size:40px;
+    font-weight: bolder;
+    margin-top: 6vh;
+
+
+}
+
+.date{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.frm{
+    text-align: center;
+    border-color: aquamarine;
+    margin-top: 3vh;
+}
+.form{
+    color: aliceblue;
+}
+.inpt{
+    color: aliceblue;
+}
+.inptformmonth{
+    color: aliceblue;
+}
+.goTo{
+    color: aliceblue;
+    text-align: center;
+    border-color: aliceblue;
+    border-style:dashed;
+    background-color:cornflowerblue;
+    margin: 5px;
+}
+.personName{
+    color: aliceblue;
+}
+.content{
+    display: flex;
+    border-color: aliceblue;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    margin-top: 3vh;
+
+}
+.b{
+    color: aliceblue;
+    text-align: center;
+    border-color: aliceblue;
+    border-width: 2px;
+    display: flex;
+    border-style: solid;
+    margin: 5px;
+    padding: 10px;
+}
+.upcoming{
+    color: aliceblue;
+    border-color: aliceblue;
+    display: flex;
+    border-style: solid;
+    text-align: right;
+    margin-left: 20vw ;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    margin-right: 0vw;
+    padding: 10px;
+}
+.upcomingName{
+    text-align: center;
+    
+}
