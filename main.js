@@ -57,8 +57,8 @@ function getDates(){
                 console.log(roomNo);
                 console.log(branch);
                 console.log(state);
-                found = true;
-                
+                found = true;    
+                    
             }
             
             if(inputDay == birthday && inputMonth == birthmonth){
