@@ -60,7 +60,8 @@
     border-width: 2px;
     display: flex;
     border-style: solid;
-    margin: 5px;
+    margin: 1vw;
+    margin-left:  1vh; 
     padding: 10px;
 }
 .upcoming{
@@ -70,12 +71,11 @@
     border-style: solid;
     text-align: right;
     margin-left: 20vw ;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
-    margin-right: 0vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
     padding: 10px;
 }
 .upcomingName{
     text-align: center;
-    
 }
