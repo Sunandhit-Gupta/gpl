@@ -1,4 +1,4 @@
-apiUrl = 'https://script.google.com/macros/s/AKfycbzaL1XtDo0_wBjDaFF5cNXyBO4u79sOPjJQ8HZZMSZzoNGTO4db7UUWJlOEI7ihFXBUhw/exec'
+
 
 let i ;
 let haveIusedTodaysDate = false;
@@ -74,7 +74,7 @@ function getDates(){
                 console.log(upcomingState);
                 found = true;
             }else{
-               
+
             }
 
             showTodayDate = document.getElementById("date");
