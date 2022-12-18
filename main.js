@@ -1,4 +1,4 @@
-
+apiUrl ='https://script.google.com/macros/s/AKfycbzaL1XtDo0_wBjDaFF5cNXyBO4u79sOPjJQ8HZZMSZzoNGTO4db7UUWJlOEI7ihFXBUhw/exec'
 
 let i ;
 let haveIusedTodaysDate = false;
@@ -9,18 +9,18 @@ let found = false;
 
 
 // Getting form inputs :
-let frm = document.getElementById("form");
-frm.addEventListener('submit', function (event) {
-    event.preventDefault() //prevents from auto submitting
-    let inptformdate = document.getElementById("inpt").value;
-    let inputformmonth = document.getElementById("inptformmonth").value;
-    inputDay = String(inptformdate);
-    inputMonth = String(inputformmonth);
-    // console.log(inputDay);
-    // console.log(inputMonth);
-    frm.reset();
-    getDates();
-})
+// let frm = document.getElementById("form");
+// frm.addEventListener('submit', function (event) {
+//     event.preventDefault() //prevents from auto submitting
+//     let inptformdate = document.getElementById("inpt").value;
+//     let inputformmonth = document.getElementById("inptformmonth").value;
+//     inputDay = String(inptformdate);
+//     inputMonth = String(inputformmonth);
+//     // console.log(inputDay);
+//     // console.log(inputMonth);
+//     frm.reset();
+//     getDates();
+// })
 
 
 function getDates(){
@@ -34,8 +34,8 @@ function getDates(){
         let todayDate = today.getDate() +"-"+[today.getMonth()+1] + "-"+ today.getFullYear();
         todayYear = today.getFullYear();
         
-        upcomingBoyName = document.getElementById("upcomingName");
-        upcomingBoyName.innerHTML = `Date : ${inputDay}-${inputMonth}-${todayYear}`;
+        // upcomingBoyName = document.getElementById("upcomingName");
+        // upcomingBoyName.innerHTML = `Date : ${inputDay}-${inputMonth}-${todayYear}`;
 
 
         for(j=1 ; j<266 ; j++){
@@ -61,21 +61,21 @@ function getDates(){
                     
             }
             
-            if(inputDay == birthday && inputMonth == birthmonth){
-                nameOfUpcomingPerson = response.data[j].Name;
-                upcomingRoomNo = response.data[j].Room;
-                upcomingBranch = response.data[j].Branch;
-                upcomingState = response.data[j].State;
-                upcomingBoyName = document.getElementById("upcomingName");
-                upcomingBoyName.innerHTML += `<li>Name: ${nameOfUpcomingPerson} , Room No: ${upcomingRoomNo}</li>`;
-                console.log(nameOfUpcomingPerson);
-                console.log(upcomingRoomNo);
-                console.log(upcomingBranch);
-                console.log(upcomingState);
-                found = true;
-            }else{
+            // if(inputDay == birthday && inputMonth == birthmonth){
+            //     nameOfUpcomingPerson = response.data[j].Name;
+            //     upcomingRoomNo = response.data[j].Room;
+            //     upcomingBranch = response.data[j].Branch;
+            //     upcomingState = response.data[j].State;
+            //     upcomingBoyName = document.getElementById("upcomingName");
+            //     upcomingBoyName.innerHTML += `<li>Name: ${nameOfUpcomingPerson} , Room No: ${upcomingRoomNo}</li>`;
+            //     console.log(nameOfUpcomingPerson);
+            //     console.log(upcomingRoomNo);
+            //     console.log(upcomingBranch);
+            //     console.log(upcomingState);
+            //     found = true;
+            // }else{
 
-            }
+            // }
 
             showTodayDate = document.getElementById("date");
             showTodayDate.innerHTML = `Todays Date : ${todayDate}`

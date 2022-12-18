@@ -45,7 +45,7 @@
     color: aliceblue;
 }
 .content{
-    display: flex;
+    /* display: flex; */
     border-color: aliceblue;
     border-width: 2px;
     border-style: solid;
@@ -58,13 +58,13 @@
     text-align: center;
     border-color: aliceblue;
     border-width: 2px;
-    display: flex;
+    /* display: flex; */
     border-style: solid;
-    margin: 1vw;
-    margin-left:  1vh; 
+    /* margin: 1vw; */
+    /* margin-left:  1vh;  */
     padding: 10px;
 }
-.upcoming{
+/* .upcoming{
     color: aliceblue;
     border-color: aliceblue;
     display: flex;
@@ -75,7 +75,7 @@
     margin-bottom: 1vh;
     margin-right: 1vw;
     padding: 10px;
-}
-.upcomingName{
+} */
+/* .upcomingName{
     text-align: center;
-}
+} */
