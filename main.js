@@ -5,7 +5,7 @@ let haveIusedTodaysDate = false;
 let inputDay;
 let inputMonth;
 let found = false;
-
+var upcomingFound = false;
 
 
 // Getting form inputs :
@@ -16,8 +16,7 @@ frm.addEventListener('submit', function (event) {
     let inputformmonth = document.getElementById("inptformmonth").value;
     inputDay = String(inptformdate);
     inputMonth = String(inputformmonth);
-    // console.log(inputDay);
-    // console.log(inputMonth);
+
     frm.reset();
     getDates();
 })
@@ -25,7 +24,7 @@ frm.addEventListener('submit', function (event) {
 
 function getDates(){
     fetch(apiUrl, { method: 'GET'}).then(response => response.json()).then(response =>{
-        console.log(response);
+
         found = false;
 
         let today = new Date();
@@ -35,7 +34,10 @@ function getDates(){
         todayYear = today.getFullYear();
 
         upcomingBoyName = document.getElementById("upcomingName");
-        upcomingBoyName.innerHTML = `Date : ${inputDay}-${inputMonth}-${todayYear}`;
+
+        if(inputDay && inputMonth){
+            upcomingBoyName.innerHTML = `Date : ${inputDay}-${inputMonth}-${todayYear}`;
+        }
 
 
         for(j=1 ; j<266 ; j++){
@@ -43,7 +45,7 @@ function getDates(){
 
             birthday = parseInt(birthdate.slice(0,2));
             birthmonth = parseInt(birthdate.slice(3,5));
-            //  console.log(birthmonth);
+
 
 
             if(birthday == todayday&&birthmonth == todaymonth&&haveIusedTodaysDate==false){
@@ -53,10 +55,7 @@ function getDates(){
                 state = response.data[j].State;
                 todayBoyName = document.getElementById("name");
                 todayBoyName.innerHTML += `<li>Name: ${nameOfPerson} , Room No: ${roomNo}</li>`;
-                console.log(nameOfPerson);
-                console.log(roomNo);
-                console.log(branch);
-                console.log(state);
+
                 found = true;
 
             }
@@ -68,18 +67,18 @@ function getDates(){
                 upcomingState = response.data[j].State;
                 upcomingBoyName = document.getElementById("upcomingName");
                 upcomingBoyName.innerHTML += `<li>Name: ${nameOfUpcomingPerson} , Branch: ${upcomingBranch} </li>`;
-                console.log(nameOfUpcomingPerson);
-                console.log(upcomingRoomNo);
-                console.log(upcomingBranch);
-                console.log(upcomingState);
-                found = true;
+
+                upcomingFound = true;
             }else{
 
             }
-
             showTodayDate = document.getElementById("date");
             showTodayDate.innerHTML = `Todays Date : ${todayDate}`
 
+            if(upcomingFound == false)
+            {
+
+            }
 
         }
         if(found == true){
